@@ -44,7 +44,6 @@ Orquestra backend e frontend
 
 ### 1. Clone o repositório
 
-```bash
 git clone https://github.com/SEU-USUARIO/integra-contador-opensource.git
 cd integra-contador-opensource
 
