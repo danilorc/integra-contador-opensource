@@ -1,4 +1,4 @@
-# integra-contador-opensource
+
 # Integra Contador OpenSource
 
 ## 🔥 Projeto
