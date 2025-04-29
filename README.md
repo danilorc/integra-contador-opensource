@@ -38,6 +38,8 @@ Orquestra backend e frontend
 
 ---
 
+---
+
 ## 🚀 Como Rodar Localmente
 
 ### 1. Clone o repositório
@@ -45,20 +47,15 @@ Orquestra backend e frontend
 ```bash
 git clone https://github.com/SEU-USUARIO/integra-contador-opensource.git
 cd integra-contador-opensource
+
 2. Configure o ambiente
 Crie o arquivo .env dentro de /backend:
 
-bash
-Copiar
-Editar
 cp backend/.env.example backend/.env
-Preencha as variáveis com suas credenciais do Serpro e o caminho do certificado digital.
 
 3. Rode tudo com Docker Compose
-bash
-Copiar
-Editar
 docker-compose up --build
+
 4. Acesse
 Backend (FastAPI - documentação Swagger): http://localhost:8000/docs
 
@@ -77,15 +74,3 @@ Sinta-se livre para usar, modificar e distribuir!
 🙌 Contribuições
 Contribuições são bem-vindas!
 Faça um fork, crie uma branch (git checkout -b feature/sua-feature), realize suas alterações e envie um Pull Request!
-
-✨ Feito com dedicação para a comunidade contábil e de desenvolvedores. 🚀
-yaml
-Copiar
-Editar
-
-
-
-
-
-
-
