@@ -1,17 +1,17 @@
-FROM python:3.11-slim
+# Etapa 1: Build do React
+FROM node:18 AS build
 
-# Define o diretório de trabalho
 WORKDIR /app
-
-# Copia as dependências
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copia o restante do código
+COPY package*.json ./
+RUN npm install
 COPY . .
+RUN npm run build
 
-# Expõe a porta da API
-EXPOSE 8000
+# Etapa 2: Servir o React via Nginx
+FROM nginx:stable-alpine
 
-# Comando para iniciar o FastAPI com Uvicorn
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+COPY --from=build /app/build /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
